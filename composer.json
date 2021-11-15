@@ -1,0 +1,38 @@
+{
+	"name": "moonwalkingbits/wordpress-templating-php",
+	"description": "A PHP-template implementation of the WordPress Templating abstraction.",
+	"type": "library",
+	"license": "GPL-2.0",
+	"authors": [
+		{
+			"name": "Martin Pettersson",
+			"email": "martin@moonwalkingbits.com"
+		}
+	],
+	"minimum-stability": "stable",
+	"scripts": {
+		"test": "phpunit",
+		"lint": "phpcs -p --standard=WordPress src/",
+		"analyze": [
+			"phpmd --suffixes php --exclude vendor/ ./ ansi phpmd.xml",
+			"phan --output-mode text --no-progress-bar --color --allow-polyfill-parser"
+		]
+	},
+	"autoload": {
+		"classmap": [
+			"src/"
+		]
+	},
+	"require": {
+		"php": ">=7.4",
+		"moonwalkingbits/wordpress-templating": "^0.1.0"
+	},
+	"require-dev": {
+		"squizlabs/php_codesniffer": "^3.6",
+		"wp-coding-standards/wpcs": "^2.3",
+		"dealerdirect/phpcodesniffer-composer-installer": "^0.7.1",
+		"phpmd/phpmd": "^2.10",
+		"phan/phan": "^5.3",
+		"phpunit/phpunit": "^9.5"
+	}
+}
