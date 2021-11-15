@@ -2,7 +2,7 @@
 	"name": "moonwalkingbits/wordpress-templating-php",
 	"description": "A PHP-template implementation of the WordPress Templating abstraction.",
 	"type": "library",
-	"license": "GPL-2.0",
+	"license": "GPL-2.0-only",
 	"authors": [
 		{
 			"name": "Martin Pettersson",
