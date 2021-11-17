@@ -6,19 +6,19 @@ use Moonwalking_Bits\Templating\Template_Not_Found_Exception;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @coversDefaultClass \Moonwalking_Bits\Templating\Engine\Php
+ * @coversDefaultClass \Moonwalking_Bits\Templating\Engine\PHP
  */
-class Php_Test extends TestCase {
+class PHP_Test extends TestCase {
 	private array $template_directories = array(
 		__DIR__ . '/fixtures/templates/'
 	);
-	private Php $engine;
+	private PHP $engine;
 
 	/**
 	 * @before
 	 */
 	public function set_up(): void {
-		$this->engine = new Php( $this->template_directories );
+		$this->engine = new PHP( $this->template_directories );
 	}
 
 	/**
@@ -55,7 +55,7 @@ class Php_Test extends TestCase {
 	 * @test
 	 */
 	public function should_accept_template_directories(): void {
-		$engine = new Php();
+		$engine = new PHP();
 		$engine->add_template_directories( $this->template_directories );
 
 		$this->assertEquals( 'title', $engine->render( 'index.php' ) );

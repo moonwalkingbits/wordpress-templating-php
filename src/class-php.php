@@ -18,7 +18,7 @@ use Moonwalking_Bits\Templating\Template_Not_Found_Exception;
  *
  * @since 0.1.0
  */
-class Php implements Engine_Interface {
+class PHP implements Engine_Interface {
 
 	/**
 	 * The directories to search for templates in.
