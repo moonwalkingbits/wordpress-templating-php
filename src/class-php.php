@@ -23,7 +23,6 @@ class PHP implements Engine_Interface {
 	/**
 	 * The directories to search for templates in.
 	 *
-	 * @since 0.1.0
 	 * @var string[]
 	 */
 	private array $template_directories;
