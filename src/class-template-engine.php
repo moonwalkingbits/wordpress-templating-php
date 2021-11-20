@@ -2,15 +2,15 @@
 /**
  * Templating PHP: Template engine implementation
  *
- * @package Moonwalking_Bits\Templating\Engine
+ * @package Moonwalking_Bits\Templating\PHP
  * @author Martin Pettersson
  * @license GPL-2.0
  * @since 0.1.0
  */
 
-namespace Moonwalking_Bits\Templating\Engine;
+namespace Moonwalking_Bits\Templating\PHP;
 
-use Moonwalking_Bits\Templating\Engine_Interface;
+use Moonwalking_Bits\Templating\Template_Engine_Interface;
 use Moonwalking_Bits\Templating\Template_Not_Found_Exception;
 
 /**
@@ -18,7 +18,7 @@ use Moonwalking_Bits\Templating\Template_Not_Found_Exception;
  *
  * @since 0.1.0
  */
-class PHP implements Engine_Interface {
+class Template_Engine implements Template_Engine_Interface {
 
 	/**
 	 * The directories to search for templates in.

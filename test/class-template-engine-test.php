@@ -1,24 +1,24 @@
 <?php
 
-namespace Moonwalking_Bits\Templating\Engine;
+namespace Moonwalking_Bits\Templating\PHP;
 
 use Moonwalking_Bits\Templating\Template_Not_Found_Exception;
 use PHPUnit\Framework\TestCase;
 
 /**
- * @coversDefaultClass \Moonwalking_Bits\Templating\Engine\PHP
+ * @coversDefaultClass \Moonwalking_Bits\Templating\PHP\Template_Engine
  */
-class PHP_Test extends TestCase {
+class Template_Engine_Test extends TestCase {
 	private array $template_directories = array(
 		__DIR__ . '/fixtures/templates/'
 	);
-	private PHP $engine;
+	private Template_Engine $engine;
 
 	/**
 	 * @before
 	 */
 	public function set_up(): void {
-		$this->engine = new PHP( $this->template_directories );
+		$this->engine = new Template_Engine( $this->template_directories );
 	}
 
 	/**
@@ -55,7 +55,7 @@ class PHP_Test extends TestCase {
 	 * @test
 	 */
 	public function should_accept_template_directories(): void {
-		$engine = new PHP();
+		$engine = new Template_Engine();
 		$engine->add_template_directories( $this->template_directories );
 
 		$this->assertEquals( 'title', $engine->render( 'index.php' ) );
